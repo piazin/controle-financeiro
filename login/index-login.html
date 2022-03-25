@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../login/style.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <main>
+
+        <form>
+            <section id="img">
+                <h2 class="title">Login</h2>
+                <img src="../image-svg/undraw_enter_uhqk.svg" alt="imagem-de-login" width="200px" height="200px">
+            </section>
+
+            <section id="login">
+                <div class="email">
+                    
+                    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+                    <lord-icon id="icon-email"
+                        src="https://cdn.lordicon.com/iicmtpsq.json"
+                        trigger="hover"
+                        colors="primary:#000"
+                        state="hover"
+                        style="width:25px;height:25px">
+                    </lord-icon>
+                    
+                    <label for="email">seu e-mail</label>
+                    <input type="email" placeholder="seu@email.com" name="email" id="email" class="input" onchange="onChangeEmail()">
+                    <div class="error" id="email-required-error">!email obrigatorio</div>
+                    <div class="error" id="email-invalid-error">!email invalido</div>
+                </div>
+                <div class="password">
+                    <label for="password">sua senha</label>
+                    <input type="password" placeholder="digite sua senha" id="password" class="input" onchange="onChangePassword()">
+                    <div class="error" id="password-required-error">Senha é obrigatória</div>
+
+                    <button class="visibily" id="btn" type="button"><ion-icon name="eye-outline"></ion-icon></button>
+
+                </div>
+                
+                <div class="button-login button">
+                    <button disabled="true" id="login-button" type="button">Login</button>
+                </div>
+                <div class="button-options button">
+                    <button id="recover-password-button" disabled="true">recuperar senha</button>
+                </div>
+            </section>
+        </form>
+
+    </main>
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
