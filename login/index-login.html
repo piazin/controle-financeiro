@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../login/style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <title>Login</title>
 </head>
 <body>
@@ -28,6 +28,7 @@
                         state="hover"
                         style="width:25px;height:25px">
                     </lord-icon>
+
                     
                     <label for="email">seu e-mail</label>
                     <input type="email" placeholder="seu@email.com" name="email" id="email" class="input" onchange="onChangeEmail()">
@@ -44,18 +45,49 @@
                 </div>
                 
                 <div class="button-login button">
-                    <button disabled="true" id="login-button" type="button">Login</button>
+                    <button disabled="true" id="login-button" type="button" onclick="login()">Login</button>
                 </div>
                 <div class="button-options button">
                     <button id="recover-password-button" disabled="true">recuperar senha</button>
+                    
+                    <button type="button" id="register" onclick="registro()">registrar</button>
                 </div>
             </section>
         </form>
+        
 
     </main>
 
     <script src="index.js"></script>
+    <script src="validate.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="loading.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCuLv5LAhAcdOYkVvm_33-M32UsSNSjvDU",
+            authDomain: "controle-de-gastos-469e3.firebaseapp.com",
+            projectId: "controle-de-gastos-469e3",
+            storageBucket: "controle-de-gastos-469e3.appspot.com",
+            messagingSenderId: "924777144104",
+            appId: "1:924777144104:web:a32ae7040a28d9dd717a1d"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 </body>
+
+<div id="loading">
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/oqhlhtfq.json"
+        trigger="loop"
+        colors="primary:#4bb3fd,secondary:#ebe6ef"
+        style="width:100px;height:100px">
+    </lord-icon>
+    <label>loading...</label>
+</div>
+
 </html>
