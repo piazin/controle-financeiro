@@ -44,6 +44,17 @@ function login() {
    
 }
 
+function recoverPassword() {
+    showLoading();
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+        hideLoading();
+        alert("Email enviado com sucesso");
+    }).catch(error => {
+        hideLoading();
+        userNot();
+    });
+}
+
 /*function getErrorMenssage(error) {
     if(error.code == "auth/wrong-password") {
         return "Usário não encontrado";
