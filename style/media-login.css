@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+    main {
+        width: 350px;
+        height: 300px;
+    }
+
+    #login {
+        padding: 2px;
+        margin-left: -17px;
+        z-index: 1;
+    }
+}
