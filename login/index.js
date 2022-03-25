@@ -39,7 +39,7 @@ function login() {
         window.location.href = "../home/home.html";
     }).catch(error => {
         hideLoading();
-        userNot();
+        userNot(error);
     });
    
 }
@@ -51,13 +51,17 @@ function recoverPassword() {
         alert("Email enviado com sucesso");
     }).catch(error => {
         hideLoading();
-        userNot();
+        userNot(error);
     });
 }
 
 /*function getErrorMenssage(error) {
-    if(error.code == "auth/wrong-password") {
+    if(error.code == "auth/user-not-found") {
         return "Usário não encontrado";
+    } 
+
+    if(error.code == "auth/wrong-password") {
+        return "Senha errrada";
     }
 
     return error.message;

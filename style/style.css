@@ -225,7 +225,7 @@ ion-icon {
     font: normal italic bold 18px 'Poppins', sans-serif;
 }
 
-#userNot {
+.user-mensage {
     display: none;
     border-radius: 10px;
     top: 10px;
