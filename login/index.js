@@ -39,7 +39,7 @@ function login() {
         window.location.href = "../home/home.html";
     }).catch(error => {
         hideLoading();
-        alert('none');
+        userNot();
     });
    
 }

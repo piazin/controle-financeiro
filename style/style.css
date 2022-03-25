@@ -225,3 +225,13 @@ ion-icon {
     font: normal italic bold 18px 'Poppins', sans-serif;
 }
 
+#userNot {
+    display: none;
+    border-radius: 10px;
+    top: 10px;
+    position: fixed;
+    background-color: rgba(209, 4, 4, 0.63);
+    padding: 30px;
+    color: white;
+}
+
