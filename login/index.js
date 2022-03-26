@@ -130,13 +130,13 @@ const form = {
 
 
 function loginGoogle() {
-    var provider = new firebase.auth.GoogleAuthProvider();
     showLoading();
+    var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth()
-  .signInWithRedirect(provider)
+  .signInWithPopup(provider)
   .then((result) => {
     /** @type {firebase.auth.OAuthCredential} */
-    hideLoading();
+    showLoading();
     var credential = result.credential;
     // This gives you a Google Access Token. You can use it to access the Google API.
     var token = credential.accessToken;
