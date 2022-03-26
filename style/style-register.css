@@ -81,4 +81,38 @@ main {
     margin-bottom: 10px;
 }
 
+#loading {
+    background-color: #474749a2;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-direction: column;
+}
+
+#loading label {
+    color: white;
+    font: normal italic bold 18px 'Poppins', sans-serif;
+}
+
+.user-mensage {
+    display: none;
+    border-radius: 10px;
+    top: 10px;
+    position: fixed;
+    background-color: rgba(209, 4, 4, 0.63);
+    padding: 30px;
+    color: white;
+}
+
+.voltar-login {
+    text-decoration: none;
+    color: white;
+    top: 23%;
+    left: 85px;
+}
+
 

@@ -25,6 +25,33 @@ function onChangePasswordConfirm() {
     toogleRegisterDisabled();
 } 
 
+function register() {
+    showLoading();
+
+    const email = form.email().value;
+    const password = form.password().value;
+    firebase.auth().createUserWithEmailAndPassword(
+        email, password
+    ).then(() => {
+        hideLoading();
+        window.location.href = "home.html";
+    }).catch(error => {
+        hideLoading();
+        getErrorMessage(error);
+    })
+}
+
+function getErrorMessage(error) {
+    if (error.code == "auth/email-already-in-use") {
+        document.getElementById('userRegister').style.display = "block";
+        setTimeout(() => getErrorRemove(), 4000);
+    }
+}
+
+function getErrorRemove() {
+    document.getElementById('userRegister').style.display = "none";
+}
+
 function validatePassword() {
     const password = form.password().value;
     const confirmPassword = form.confirmPassword().value;
@@ -63,3 +90,5 @@ const form = {
     passwordIgual: ()=> document.getElementById('password-igual-error'),
     btnRegister: ()=> document.getElementById('btn-register')
 }
+
+
