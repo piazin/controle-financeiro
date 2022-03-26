@@ -1,7 +1,15 @@
 @media (max-width: 556px) {
     main {
         width: 350px;
-        height: 300px;
+        height: 600px;
+    }
+
+    .input {
+        border-bottom-right-radius: 10px;
+        margin-bottom: 8px;
+        border: none;
+        outline: none;
+        padding: 14px;
     }
 }
 
