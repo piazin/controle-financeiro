@@ -55,22 +55,9 @@ function recoverPassword() {
     });
 }
 
-/*function getErrorMenssage(error) {
-    if(error.code == "auth/user-not-found") {
-        return "Usário não encontrado";
-    } 
-
-    if(error.code == "auth/wrong-password") {
-        return "Senha errrada";
-    }
-
-    return error.message;
-}*/
-
 function registro() {
     window.location.href = "../home/register.html";
 }
-
 
  //está function vai se encaregar de validar o e-mail digitado pelo usuário
 function toggleEmailErrors() {

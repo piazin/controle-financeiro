@@ -48,13 +48,23 @@ main {
 
 .input {
     border-bottom-right-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     border: none;
     outline: none;
     padding: 5px;
 }
 
-.btn-register {
+#btn-register:disabled {
+    background-image: linear-gradient(62deg, #75767717 0%, #47474952 100%);
+    color: rgb(209, 209, 209);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#btn-register {
     background-image: linear-gradient(62deg, #77797d 0%, #474749 100%);
     color: white;
     cursor: pointer;
@@ -63,3 +73,12 @@ main {
     outline: none;
     border-radius: 5px;
 }
+
+.error {
+    display: none;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.473);
+    margin-bottom: 10px;
+}
+
+

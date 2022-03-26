@@ -15,23 +15,30 @@
             <h2>Faça seu cadastro</h2>
             <div>
                 <label class="label">e-mail:</label>
-                <input type="email" placeholder="seu@email.com" class="input">
+                <input type="email" placeholder="seu@email.com" class="input" onchange="onChangeEmail()" id="email">
+                <div class="error" id="email-required-error">!email obrigatorio</div>
+                <div class="error" id="email-invalid-error">!email invalido</div>
             </div>
             <div>
                 <label class="label">senha:</label>
-                <input type="password" placeholder="senha" class="input">
+                <input type="password" placeholder="senha" class="input" id="password" onchange="onChangePassword()">
+                <div class="error" id="password-required-error">Senha é obrigatória</div>
+                <div class="error" id="password-min-legth-error">a senha deve conter no minimo 6 caracters</div>
             </div>
             <div>
                 <label>confirmar senha:</label>
-                <input type="password" placeholder="confirme sua senha" class="input">
+                <input type="password" placeholder="confirme sua senha" class="input" id="confirmPassword" onchange="onChangePasswordConfirm()">
+                <div class="error" id="password-igual-error">Senha e Confirmar senha devem ser iguais</div>
             </div>
             <div>
-                <button type="button" class="btn-register">registrar</button>
+                <button id="btn-register" disabled="true" type="button">registrar</button>
             </div>
 
             <div><a href="../login/index-login.html" target="prev" rel=""></a></div>
         </form>
     </main>
 
+    <script src="register.js"></script>
+    <script src="../login/validate.js"></script>
 </body>
 </html>

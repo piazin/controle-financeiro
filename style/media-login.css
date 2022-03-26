@@ -1,12 +1,16 @@
 @media (max-width: 600px) {
     main {
         width: 350px;
-        height: 300px;
+        height: 600px;
     }
 
     #login {
         padding: 2px;
         margin-left: -17px;
         z-index: 1;
+    }
+
+    main form {
+        flex-direction: column;
     }
 }

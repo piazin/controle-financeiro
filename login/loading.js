@@ -19,7 +19,7 @@ function userNot(error) {
 }
 
 function userRemoveNot() {
-    userRemove.userRemove().style.display = "none";
+    userRemove.userRmNot().style.display = "none";
 }
 
 function userRemovePass() {
