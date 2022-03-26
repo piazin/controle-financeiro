@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/media-login.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400"/>
     <title>Login</title>
 </head>
 <body>
@@ -47,6 +48,12 @@
                 
                 <div class="button-login button">
                     <button disabled="true" id="login-button" type="button" onclick="login()">Login</button>
+
+                    <div class="google-btn">
+                        <div class="google-icon-wrapper">
+                            <button onclick="loginGoogle();" class="button-google" type="button"><img class="google-icon-svg" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="button-options button">
                     <button type="button" id="recover-password-button" disabled="true" onclick="recoverPassword()">recuperar senha</button>

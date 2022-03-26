@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style-register.css">
     <link rel="stylesheet" href="../style/media.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400"/>
     <title>Login</title>
 </head>
 <body>
@@ -32,11 +33,18 @@
             </div>
             <div>
                 <button id="btn-register" disabled="true" type="button" onclick="register()">registrar</button>
+
+                <div class="google-btn">
+                <div class="google-icon-wrapper">
+                    <img class="google-icon-svg" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
+                </div>
+                <p class="btn-text"><button type="button" onclick="loginGoogle()">Sign in with Google</button></p>
+                </div>
             </div>
 
             <div><a href="../login/index-login.html" class="voltar-login" target="_self" rel="prev">
                 <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
-                <lord-icon
+                <lord-icon 
                     src="https://cdn.lordicon.com/iifryyua.json"
                     trigger="hover"
                     colors="primary:#ebe6ef"
