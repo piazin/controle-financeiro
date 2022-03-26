@@ -54,6 +54,15 @@
     <script src="../login/loading.js"></script>
     <script src="../login/firebase-init.js"></script>
 
+    <script>
+        
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                window.location.href = "home.html";
+            }
+        })
+    </script>
+
     <!--mensagens de erro-->
     <div id="loading">
         <script src="https://cdn.lordicon.com/lusqsztk.js"></script>

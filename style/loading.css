@@ -1,0 +1,16 @@
+#loading {
+    background-color: #474749a2;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-direction: column;
+}
+
+#loading label {
+    color: white;
+    font: normal italic bold 18px 'Poppins', sans-serif;
+}

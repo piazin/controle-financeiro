@@ -1,0 +1,125 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #2f3031 0%, #4a505a 100%);
+    overflow-x: hidden;
+}
+
+/**************Init-Header***************/
+
+#header-main {
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(241, 241, 241);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    
+}
+
+#header-main .nav-list {
+    margin-left: 20px;
+}
+
+.nav-list ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+.btn-logout {
+    border-radius: 5px;
+    border-bottom-right-radius: 8px;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(to left, #4b6cb7, #182848);
+    transition-duration: 0.5s;
+    background-position: left;
+    background-size: 100% 100%;
+    border: none;
+    width: 50px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.btn-logout:hover {
+    background-image: linear-gradient(to left, #3e558a, #0d1422);
+}
+/**************End Header**************/
+
+/**************Init Main***************/
+#container-main {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+}
+
+#container-main h1 {
+    margin-top: 80px;
+    font-family: Opens Sans, sans-serif;
+    color: white;
+    align-self: center;
+}
+
+#container-main ol {
+    list-style-type: none;
+    margin: 20px 0px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    
+}
+
+#container-main ol li {
+    border-bottom: 1px solid black;
+    background-color: azure;
+    cursor: pointer;
+    padding: 8px 16px;
+
+    transition-duration: 0.5s;
+}
+
+#container-main ol li:hover {
+    opacity: 0.8;
+} 
+
+ol .expense {
+    border-left: 10px solid rgb(172, 1, 1);
+}
+
+ol .gain {
+    border-left: 10px solid rgb(2, 141, 2);
+}
+
+.fab {
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    background-color: #ebe6ef;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.fab:hover {
+    opacity: 0.8;
+}

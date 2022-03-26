@@ -4,13 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/loading.css">
+    <link rel="stylesheet" href="../style/home.css">
     <title>Login</title>
 </head>
 <body>
-    
-    <main>
-        Te amo Hamu
+
+    <header id="header-main"> 
+        <nav class="nav-list">
+            <ul>
+                <li>
+                    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/ptzvfshs.json"
+                        trigger="hover"
+                        style="width:50px;height:50px">
+                    </lord-icon>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="button"><button onclick="logout();" class="btn-logout">Sair</button></div>
+    </header>
+
+    <main id="container-main">
+        <h1>Controle de Gastos</h1>
+        <ol>
+            <li class="gain">
+                <b>23/03/2022</b>
+                <p>R$ 10,00</p>
+                <p>Salario</p>
+                <p>Descripition</p>
+            </li>
+            <li class="expense">
+                <b>24/03/2022</b>
+                <p>R$ 20,00</p>
+                <p>Gasolina</p>
+            </li>
+            <li class="expense">
+                <b>25/03/2022</b>
+                <p>R$ 50,00</p>
+                <p>Shopee</p>
+                <p>Descripition</p>
+            </li>
+            <li class="expense">
+                <b>26/03/2022</b>
+                <p>R$ 15,00</p>
+                <p>Transporte</p>
+                <p>Descripition</p>
+            </li>
+        </ol>
     </main>
 
+
+    <script src="home.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../login/firebase-init.js"></script>
+    <script src="../login/loading.js"></script>
+    <script src="../login/auth-guard.js"></script>
+
+    <!--mensagens de loading-->
+    <div id="loading">
+        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/oqhlhtfq.json"
+            trigger="loop"
+            colors="primary:#4bb3fd,secondary:#ebe6ef"
+            style="width:100px;height:100px">
+        </lord-icon>
+        <label>loading...</label>
+    </div>
+
+    <!--button adc-->
+
+    <button class="fab">
+        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/mecwbjnp.json"
+            trigger="click"
+            colors="primary:#ebe6ef,secondary:#08a88a"
+            style="width:50px;height:50px">
+        </lord-icon>
+    </button>
 </body>
 </html>

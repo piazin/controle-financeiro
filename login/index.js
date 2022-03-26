@@ -124,3 +124,4 @@ const form = {
     emailInvalid: () => document.getElementById('email-invalid-error'),
     passwordRequired: () => document.getElementById('password-required-error')
 }
+
