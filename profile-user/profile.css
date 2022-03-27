@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+header#header-main  {
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cotainer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wellcome-user {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#img-user-login {
+    box-shadow: -1px 1px 1px black;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/***************main***************/
+
+#container {
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box-options {
+    outline: none;
+    width: 350px;
+    height: 250px;
+    background-color: aliceblue;
+    border: 1px solid black;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-update {
+    border: none;
+}
+
+/****************************/
+#loading {
+    background-color: #474749a2;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    flex-direction: column;
+}
+
+#loading label {
+    color: white;
+    font: normal italic bold 18px 'Poppins', sans-serif;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400"/>
+    <link rel="stylesheet" href="profile.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <header id="header-main">
+        <div class="cotainer-header">
+            <div class="wellcome-user">
+                <img id="img-user-login" src="" alt="image-user">
+                <h2>Bem-vindo,</h2>
+                <h2 id="name-user"></h2>
+            </div>
+            <div class="text-explication">
+                <p>Gerencie suas informações, privacidade e segurança</p>
+                <a href="../home/home.html" target="_self" rel="prev">voltar</a>
+            </div>
+        </div>
+    </header>
+    
+    <main id="container">
+        <div class="box-options">
+
+            <form id="form-update">
+                <h3>Atualizar seu nome</h3>
+                <label for="input-update-name">Nome: </label>
+                <input type="text" placeholder="Lucas Souza" id="input-update-name" name="input-update-name">
+                <button type="button" onclick="updateNameUser()" style="width: 100%;" id="btn-update-user">atualizar</button>
+            </form>
+
+        </div>
+        <div class="box-options">Aplicação em desen...</div>
+    </main>
+
+    <script src="../login/validate.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="../login/firebase-init.js"></script>
+    <script src="auth-profile.js"></script>
+    <script src="../login/loading.js"></script>
+
+    <script>
+        
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                //window.location.href = "../home/home.html";
+            }
+        })
+    </script>
+</body>
+
+<!--mensagens de loading-->
+<div id="loading">
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <lord-icon
+        src="https://cdn.lordicon.com/oqhlhtfq.json"
+        trigger="loop"
+        colors="primary:#4bb3fd,secondary:#ebe6ef"
+        style="width:100px;height:100px">
+    </lord-icon>
+    <label>loading...</label>
+</div>
+
+</html>
