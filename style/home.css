@@ -89,7 +89,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 200px;
-    height: 200px;
+    height: 230px;
     position: absolute;
     top: 65px;
     right: 5px;  
@@ -103,6 +103,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     margin-bottom: 5px;
+    word-break: break-all;
+    text-align: center;
+    max-width: 180px;
 }
 /**************End Header**************/
 

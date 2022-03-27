@@ -144,6 +144,7 @@ function loginGoogle() {
     var user = result.user;
     // ...
   }).catch((error) => {
+      hideLoading();
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
