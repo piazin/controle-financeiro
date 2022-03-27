@@ -7,6 +7,14 @@ function logout() {
       });
 }
 
+/*******Menu Mobile*********/
+
+function menuMobile() {
+  let btn = document.getElementById('menu-sheet-id');
+  btn.classList.toggle ("active");
+}
+
+
 findTransactions();
 
 function findTransactions() {

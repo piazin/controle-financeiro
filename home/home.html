@@ -23,36 +23,22 @@
                 </li>
             </ul>
         </nav>
-
-        <div class="button"><button onclick="logout();" class="btn-logout">Sair</button></div>
+        <div class="button">
+            <button class="btn-menu-login" type="button" onclick="menuMobile();">
+                <img id="img-user-login" src="" alt="usuário  sem foto"></button>
+            <div class="menu-sheet" id="menu-sheet-id">
+                <img id="img-user-login-menu" src="" alt="usuário sem foto">
+                <label id="name-user" class="user-info"></label>
+                <label id="email-user" class="user-info"></label>
+                <button onclick="logout();" class="btn-logout">Sair</button>
+            </div>
+        </div>
     </header>
 
     <main id="container-main">
         <h1>Controle de Gastos</h1>
         <ol id="transactions">
-            <!--<li class="gain">
-                <b>23/03/2022</b>
-                <p>R$ 10,00</p>
-                <p>Salario</p>
-                <p>Descripition</p>
-            </li>
-            <li class="expense">
-                <b>24/03/2022</b>
-                <p>R$ 20,00</p>
-                <p>Gasolina</p>
-            </li>
-            <li class="expense">
-                <b>25/03/2022</b>
-                <p>R$ 50,00</p>
-                <p>Shopee</p>
-                <p>Descripition</p>
-            </li>
-            <li class="expense">
-                <b>26/03/2022</b>
-                <p>R$ 15,00</p>
-                <p>Transporte</p>
-                <p>Descripition</p>
-            </li>-->
+           
         </ol>
     </main>
 
