@@ -1,3 +1,4 @@
+
 function logout() {
     showLoading();
     firebase.auth().signOut().then(() => {
