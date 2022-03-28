@@ -48,7 +48,7 @@ header#header-main  {
 /***************main***************/
 
 #container {
-    background-color: aquamarine;
+    background-color: #1c1c1cab;
     height: 100%;
     width: 100%;
     display: flex;
@@ -58,19 +58,59 @@ header#header-main  {
 }
 
 .box-options {
+    border-radius: 8px;
+    border: none;
     outline: none;
-    width: 350px;
-    height: 250px;
-    background-color: aliceblue;
+    width: 450px;
+    height: 300px;
+    background-color: rgb(34,34,34);
     border: 1px solid black;
     margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
 #form-update {
+    border-bottom-right-radius: 30px;
+    border: 0.5px solid #cbcbcb81;
+    padding: 65px 20px;
+}
+
+#form-update h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#input-update-name {
+    width: 100%;
+    border-radius: 5px;
     border: none;
+    padding: 10px;
+    outline: none;
+    margin: 5px 0px 15px 0px;
+}
+
+.labelName {
+    text-transform: lowercase;
+    font-size: 13px;
+    
+}
+
+#btn-update-user {
+    border: none;
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+
+    transition-duration: 0.5s;
+}
+
+#btn-update-user:hover {
+    opacity: 0.8;
 }
 
 /****************************/

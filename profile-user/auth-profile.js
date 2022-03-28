@@ -29,15 +29,23 @@ const info = {
 
 
 function updateNameUser() {
-    firebase.auth().currentUser.updateProfile({
-    displayName: info.updateUser.value,
-    }).then(() => {
-        info.reloader();
-    }).catch((error) => {
-    // An error occurred
-    // ...
-    });
+    const name = info.updateUser.value;
+
+    if(name == null || name.length >= 3) {
+        firebase.auth().currentUser.updateProfile({
+            displayName: info.updateUser.value,
+            }).then(() => {
+                info.reloader();
+            }).catch((error) => {
+            // An error occurred
+            // ...
+            });
+    } else {
+        alert('nome muito curto');
+    }
+    
 }
+
 
 
 
