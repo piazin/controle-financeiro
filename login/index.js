@@ -48,6 +48,14 @@ function recoverPassword() {
     showLoading();
     firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
         hideLoading();
+        Swal.fire({
+            background: '#fff',
+            color: '#000',
+            position: 'center',
+            icon: 'success',
+            title: 'Email para redefinição de senha enviado!',
+            showConfirmButton: true
+          });
     }).catch(error => {
         hideLoading();
         userNot(error);
