@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/loading.css">
-    <link rel="stylesheet" href="../style/home.css">
-    <title>Login</title>
-</head>
-<body>
+<!doctype html>
+<html>
 
+<head>
+    <title>Home - Controle de gastos</title>
+    <link rel="stylesheet" href="../style/loading.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
     <header id="header-main"> 
         <nav class="nav-list">
             <ul>
@@ -44,19 +42,6 @@
         </ol>
     </main>
 
-
-    <script src="home.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
-    <script src="../login/firebase-init.js"></script>
-    <script src="../login/loading.js"></script>
-    <script src="../login/auth-guard.js"></script>
-
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.all.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
-
-    <!--mensagens de loading-->
     <div id="loading">
         <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
         <lord-icon
@@ -80,4 +65,16 @@
         </lord-icon>
     </button>
 </body>
+
+
+<link rel="stylesheet" href="../style/home.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script src="../login/firebase-init.js"></script>
+<script src="../login/auth-guard.js"></script>
+<script src="../login/loading.js"></script>
+<script src="home.js"></script>
+
 </html>
