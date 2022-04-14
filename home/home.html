@@ -4,6 +4,7 @@
 <head>
     <title>Home - Controle de gastos</title>
     <link rel="stylesheet" href="../style/loading.css">
+    <link rel="stylesheet" href="../style/modal-home.css">
     <meta charset="UTF-8">
 </head>
 
@@ -55,7 +56,7 @@
 
     <!--button adc-->
 
-    <button class="fab">
+    <button class="fab" onclick="newTransaction()">
         <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
         <lord-icon
             src="https://cdn.lordicon.com/mecwbjnp.json"
@@ -64,6 +65,63 @@
             style="width:50px;height:50px">
         </lord-icon>
     </button>
+
+    <!--Modal New Transactions-->
+    <div id="modal">
+        <div class="box-modal">
+            <form>
+                <div class="form-field">
+                    <h3>Transactions</h3>
+                    <input type="radio" name="type" checked id="expense">
+                    <label for="expense">Despesa</label>
+                    <input type="radio" name="type" id="income">
+                    <label for="income">Receita</label>
+                </div>
+                
+                <div class="form-field">
+                    <h3>Data</h3>
+                    <input type="date" onchange="onChangeDate()" id="date">
+                </div>
+                <div class="error" id="date-required-error">Data obrigatoria</div>
+
+                <div class="form-field">
+                    <h3>Moeda</h3>
+                    <select id="currency"> 
+                        <option selected value="BRL">Real</option>
+                        <option value="USD">Dolar</option>
+                        <option value="EUR">Euro</option>
+                    </select>
+                </div>    
+                
+                <div class="form-field">
+                    <h3>Valor</h3>
+                    <input type="number" onchange="onChangeValue()" id="value">
+                </div>
+
+                <div class="error" id="value-required-error">Valor obrigatorio</div>
+
+                <div class="form-field">
+                    <h3>Tipo de transação</h3>
+                    <select onchange="onChangeTransactionType()" id="transaction-type"> 
+                        <option value="">--Selecione um tipo de transação--</option>
+                        <option>Alimentação</option>
+                        <option>Salario</option>
+                        <option>Transporte</option>
+                        <option>Outros</option>
+                    </select>
+                    <div class="error" id="transaction-type-required-error">Tipo de transação obrigatoria</div>
+                </div>
+
+                <div class="form-field">
+                    <h3>Descrição</h3>
+                    <input type="text" id="description">
+                </div>
+
+                <button type="button" class="solid btn-transaction" id="save-button" disabled onclick="saveTransaction()">Salvar</button>
+                <button type="button" class="cancel btn-transaction" onclick="newTransaction()">Cancelar</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 
@@ -75,6 +133,7 @@
 <script src="../login/firebase-init.js"></script>
 <script src="../login/auth-guard.js"></script>
 <script src="../login/loading.js"></script>
+<script src="modal.js"></script>
 <script src="home.js"></script>
 
 </html>

@@ -15,6 +15,7 @@ body {
     height: 100vh;
     background: linear-gradient(90deg, #2f3031 0%, #4a505a 100%);
     overflow-x: hidden;
+    position: relative;
 }
 
 /**************Init-Header***************/
@@ -156,7 +157,7 @@ ol .expense {
     border-left: 10px solid rgb(172, 1, 1);
 }
 
-ol .gain {
+ol .income {
     border-left: 10px solid rgb(2, 141, 2);
 }
 

@@ -8,15 +8,26 @@ function logout() {
       });
 }
 
-findTransactions();
+firebase.auth().onAuthStateChanged(user => {
+  if (user){
+      findTransactions(user);
+  }
+})
 
-function findTransactions() {
+function findTransactions(user) {
+    showLoading();
     firebase.firestore()
         .collection('transactions')
+        .where('user.uid', '==', user.uid)
+        .orderBy('date', 'desc')
         .get()
         .then(snapshot => {
+            hideLoading();
             const transactions = snapshot.docs.map(doc => doc.data());
             addTransactionsToScreen(transactions);
+        }).catch(error => {
+          hideLoading();
+          alert('erro ao recuperar transações');
         })
 }
 
@@ -39,10 +50,10 @@ function addTransactionsToScreen(trasactions) {
     type.innerHTML = trasactions.transactionType;
     li.appendChild(type);
 
-    if(trasactions.descripition) {
-      const descripition = document.createElement('p');
-      descripition.innerHTML = trasactions.descripition;
-      li.appendChild(descripition);
+    if(trasactions.description) {
+      const description = document.createElement('p');
+      description.innerHTML = trasactions.description;
+      li.appendChild(description);
     }
 
     orderedList.appendChild(li);
@@ -61,4 +72,15 @@ function formatMoney(money) {
 function menuMobile() {
   let btn = document.getElementById('menu-sheet-id');
   btn.classList.toggle ("active");
+}
+
+// button new transaction //
+function newTransaction() {
+  const btn = document.getElementById('modal');
+  if(btn.style.display == "flex"){
+    btn.style.display = "none";
+  } else {
+    btn.style.display = "flex";
+  }
+  
 }
