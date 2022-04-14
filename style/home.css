@@ -144,6 +144,7 @@ body {
     background-color: azure;
     cursor: pointer;
     padding: 8px 16px;
+    margin-bottom: 10px;
 
     transition-duration: 0.5s;
     z-index: 0;
