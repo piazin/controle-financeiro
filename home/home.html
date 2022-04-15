@@ -33,8 +33,16 @@
                 <img id="img-user-login-menu" src="" alt="usuário sem foto">
                 <label id="name-user" class="user-info"></label>
                 <label id="email-user" class="user-info"></label>
-                <a href="../profile-user/user-profile.html">clique</a>
-                <button onclick="logout();" class="btn-logout">Sair</button>
+
+                <a href="../profile-user/user-profile.html" class="link-user-profile">
+                    <ion-icon name="finger-print-outline"></ion-icon>
+                    acesse sua conta
+                </a>
+                                            
+                <button onclick="logout();" class="btn-logout">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                    Sair
+                </button>
             </div>
         </div>
     </header>
@@ -130,6 +138,9 @@
 
 <link rel="stylesheet" href="../style/home.css">
 
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>

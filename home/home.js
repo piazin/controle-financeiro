@@ -23,7 +23,10 @@ function findTransactions(user) {
         .get()
         .then(snapshot => {
             hideLoading();
-            const transactions = snapshot.docs.map(doc => doc.data());
+            const transactions = snapshot.docs.map(doc => ({
+              ...doc.data(),
+              uid: doc.id
+            }));
             addTransactionsToScreen(transactions);
         }).catch(error => {
           hideLoading();
@@ -35,8 +38,15 @@ function addTransactionsToScreen(trasactions) {
   const orderedList = document.getElementById('transactions');
 
   trasactions.forEach(trasactions => {
+    console.log(trasactions);
     const li = document.createElement('li');
     li.classList.add(trasactions.type);
+    li.id = trasactions.uid;
+    li.addEventListener("click", ()=> {
+      window.location.href = "modal.html?uid=" + trasactions.uid;
+    })
+
+    
 
     const date = document.createElement('p');
     date.innerHTML = formatDate(trasactions.date);
@@ -56,6 +66,15 @@ function addTransactionsToScreen(trasactions) {
       li.appendChild(description);
     }
 
+    const deleteButton = document.createElement('img');
+    deleteButton.src = "../image-svg/trash-outline.svg"
+    deleteButton.classList.add('btn-remove');
+    deleteButton.addEventListener('click', event => {
+      event.stopImmediatePropagation();
+      askRemoveTransaction(trasactions);
+    })
+    li.appendChild(deleteButton);
+
     orderedList.appendChild(li);
   });
 }
@@ -66,6 +85,25 @@ function formatDate(date) {
 
 function formatMoney(money) {
   return `${money.currency} ${money.value.toFixed(2)}`
+}
+
+function askRemoveTransaction(transaction) {
+  const shouldRemove = confirm("Deseja remover o item?");
+  if(shouldRemove) {
+    removeTransaction(transaction);
+  }
+}
+
+function removeTransaction(transaction) {
+  showLoading();
+  firebase.firestore()
+    .collection("transactions")
+    .doc(transaction.uid)
+    .delete()
+    .then(() => {
+      hideLoading();
+      document.getElementById(transaction.uid).remove();
+    })
 }
 
 /*******Menu Mobile*********/
@@ -84,3 +122,4 @@ function newTransaction() {
   }
   
 }
+

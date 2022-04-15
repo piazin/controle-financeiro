@@ -55,11 +55,15 @@ body {
     background-position: left;
     background-size: 100% 100%;
     border: none;
-    width: 50px;
-    height: 24px;
-    right: 33%;
-    bottom: 15px;
+    width: 100px;
+    height: 45px;
+    right: 32%;
+    bottom: 50px;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .btn-logout:hover {
@@ -85,15 +89,17 @@ body {
 
 .menu-sheet {
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: rgb(233, 233, 233);
     display: none;
     align-items: center;
     flex-direction: column;
-    width: 200px;
-    height: 230px;
+    width: 300px;
+    height: 330px;
     position: absolute;
     top: 65px;
-    right: 5px;  
+    right: 5px;
+    animation: modalMenu 0.4s normal;  
+    z-index: 4;
 }
 
 .menu-sheet.active {
@@ -107,6 +113,24 @@ body {
     word-break: break-all;
     text-align: center;
     max-width: 180px;
+}
+
+#name-user::before {
+    content: "Olá,";
+    padding-right: 4px;
+}
+
+.link-user-profile {
+    text-decoration: none;
+    color: rgb(0, 110, 255);
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+
+.link-user-profile:hover {
+    opacity: 0.7;
 }
 /**************End Header**************/
 
@@ -136,7 +160,7 @@ body {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    
+    animation: modalMenu 1s normal;
 }
 
 #container-main ol li {
@@ -148,6 +172,7 @@ body {
 
     transition-duration: 0.5s;
     z-index: 0;
+    animation: modalMenu 1s normal;
 }
 
 #container-main ol li:hover {
@@ -178,4 +203,35 @@ ol .income {
 .fab:hover {
     opacity: 0.8;
 }
+
+@keyframes modalMenu {
+    0% {
+        opacity: 0;
+        transform: translateX(110px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.btn-remove {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    display: none;
+    animation: modalMenu 0.1s normal;
+    z-index: 1;
+}
+
+.btn-remove:hover {
+    opacity: 0.6;
+}
+
+#container-main ol li:hover .btn-remove{
+    display: block;
+} 
+
+
+
 

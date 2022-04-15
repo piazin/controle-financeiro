@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/modalEdit.css">
+    <link rel="stylesheet" href="../style/loading.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="modal">
+        <div class="box-modal">
+            <form>
+                <div class="form-field">
+                    <h3>Transactions</h3>
+                    <input type="radio" name="type" checked id="expense">
+                    <label for="expense">Despesa</label>
+                    <input type="radio" name="type" id="income">
+                    <label for="income">Receita</label>
+                </div>
+                
+                <div class="form-field">
+                    <h3>Data</h3>
+                    <input type="date" onchange="onChangeDate()" id="date">
+                </div>
+                <div class="error" id="date-required-error">Data obrigatoria</div>
+
+                <div class="form-field">
+                    <h3>Moeda</h3>
+                    <select id="currency"> 
+                        <option selected value="R$">Real</option>
+                        <option value="U$">Dolar</option>
+                        <option value="EUR">Euro</option>
+                    </select>
+                </div>    
+                
+                <div class="form-field">
+                    <h3>Valor</h3>
+                    <input type="number" onchange="onChangeValue()" id="value">
+                </div>
+
+                <div class="error" id="value-required-error">Valor obrigatorio</div>
+
+                <div class="form-field">
+                    <h3>Tipo de transação</h3>
+                    <select onchange="onChangeTransactionType()" id="transaction-type"> 
+                        <option value="">--Selecione um tipo de transação--</option>
+                        <option>Alimentação</option>
+                        <option>Salario</option>
+                        <option>Transporte</option>
+                        <option>Outros</option>
+                    </select>
+                    <div class="error" id="transaction-type-required-error">Tipo de transação obrigatoria</div>
+                </div>
+
+                <div class="form-field">
+                    <h3>Descrição</h3>
+                    <input type="text" id="description">
+                </div>
+
+                <button type="button" class="solid btn-transaction" id="save-button" disabled onclick="saveTransaction()">Salvar</button>
+                <button type="button" class="cancel btn-transaction" onclick="cancelEditTransaction()">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <!--mensagens de erro-->
+    <div id="loading">
+        <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+        <lord-icon
+            src="https://cdn.lordicon.com/oqhlhtfq.json"
+            trigger="loop"
+            colors="primary:#4bb3fd,secondary:#ebe6ef"
+            style="width:100px;height:100px">
+        </lord-icon>
+        <label>loading...</label>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="../login/firebase-init.js"></script>
+    <script src="../login/auth-guard.js"></script>
+
+    <script src="modal.js"></script>
+    <script src="../login/loading.js"></script>
+</body>
+</html>
