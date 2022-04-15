@@ -46,8 +46,6 @@ function addTransactionsToScreen(trasactions) {
       window.location.href = "modal.html?uid=" + trasactions.uid;
     })
 
-    
-
     const date = document.createElement('p');
     date.innerHTML = formatDate(trasactions.date);
     li.appendChild(date);
