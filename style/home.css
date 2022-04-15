@@ -160,7 +160,7 @@ body {
     width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    animation: modalMenu 1s normal;
+    animation: modalMenu 0.3s normal;
 }
 
 #container-main ol li {
@@ -172,7 +172,7 @@ body {
 
     transition-duration: 0.5s;
     z-index: 0;
-    animation: modalMenu 1s normal;
+    animation: modalMenu 0.3s normal;
 }
 
 #container-main ol li:hover {
