@@ -4,7 +4,7 @@ controle de gastos em processo de deselvolvimento
 
 
 ## 🚀 Sobre mim
-Sou  estudante de ADS na Unifil, trablaho atualmente na infraestrutura de T.I
+Sou  estudante de ADS na Unifil, trabalho atualmente na infraestrutura de T.I
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/piazin)
