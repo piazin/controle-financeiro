@@ -171,12 +171,14 @@ body {
     margin-bottom: 10px;
 
     transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
     z-index: 0;
     animation: modalMenu 0.3s normal;
 }
 
 #container-main ol li:hover {
     background-color: rgba(223, 235, 235, 0.973);
+    padding-bottom: 30px;
 } 
 
 ol .expense {
@@ -218,7 +220,7 @@ ol .income {
 .btn-remove {
     width: 30px;
     height: 30px;
-    margin-top: 10px;
+    margin-top: 15px;
     display: none;
     animation: modalMenu 0.1s normal;
     z-index: 1;
