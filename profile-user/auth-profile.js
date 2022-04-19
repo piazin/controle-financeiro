@@ -47,7 +47,7 @@ function updatePass() {
     const user = firebase.auth().currentUser;
     const newPassword = info.passwordUser.value;
 
-    if(newPassword == null || newPassword >= 6) {
+    if(newPassword != null) {
         user.updatePassword(newPassword).then(() => {
             alert('ok');
             info.reloader();
