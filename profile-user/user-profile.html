@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400"/>
     <link rel="stylesheet" href="profile.css">
     <title>Login</title>
@@ -19,24 +18,40 @@
                 <h2 id="name-user"></h2>
             </div>
             <div class="text-explication">
-                <p>Gerencie suas informações, privacidade e segurança</p>
-                <a href="../home/home.html" target="_self" rel="prev">voltar</a>
+                <p>Gerencie suas informações, privacidade e segurança.</p>
             </div>
         </div>
+
+        <a href="../home/home.html" class="voltar"><ion-icon name="chevron-back-outline"></ion-icon></a>
     </header>
     
     <main id="container">
         <div class="box-options">
-
-            <form id="form-update">
+            <form class="form-update">
                 <h3>Atualizar nome de usuário</h3>
-                <label for="input-update-name" class="labelName">Nome</label>
-                <input type="text" placeholder="Lucas Souza" id="input-update-name" name="input-update-name">
-                <button type="button" onclick="updateNameUser()" style="width: 100%;" id="btn-update-user">atualizar</button>
+                <label for="input-update-name" class="labelName">nome</label>
+                <input type="text" placeholder="novo nome" id="input-update-name" name="input-update-name">
+                <button type="button" onclick="updateNameUser()" class="card-button" id="btn-update-user">atualizar</button>
             </form>
-
         </div>
-        <div class="box-options">Aplicação em desen...</div>
+        <div class="box-options">
+            <form class="form-update">
+                <h3>Atualizar sua senha</h3>
+                <label for="senha">senha</label>
+                <input type="text" placeholder="nova senha" id="senha" name="senha">
+                <button type="button" onclick="updatePass()" class="card-button">atualizar</button>
+            </form>
+        </div>
+
+        <div class="box-options">
+            <details class="form-update">
+                <summary>Danger zone</summary>
+    
+                <p>Deseja realmente excluir sua conta?</p>
+                <button type="button" onclick="deleteUser()">excluir conta</button>
+            </details>
+        </div>
+        
     </main>
 
     <script src="../login/validate.js"></script>
@@ -48,6 +63,7 @@
     <script src="auth-profile.js"></script>
     <script src="../login/loading.js"></script>
 
+
     <script>
         
         firebase.auth().onAuthStateChanged(user => {
@@ -56,6 +72,11 @@
             }
         })
     </script>
+
+    <!--sweet alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </body>
 
 <!--mensagens de loading-->
