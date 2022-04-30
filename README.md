@@ -1,6 +1,6 @@
 # CFP
 
-controle de gastos em processo de deselvolvimento 
+controle de gastos  
 
 ## 🚀 projeto piloto em firebase 
 
