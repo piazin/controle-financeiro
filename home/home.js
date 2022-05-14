@@ -10,6 +10,7 @@ function logout() {
 
 firebase.auth().onAuthStateChanged(user => {
   if (user){
+      user.getIdToken().then(token => {console.log(token)});
       findTransactions(user);
   }
 })
